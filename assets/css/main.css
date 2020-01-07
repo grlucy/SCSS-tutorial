@@ -1,6 +1,18 @@
 body {
   background: #272727;
   color: #fff;
+}
+
+.main {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.main .main_para {
   font-weight: 700;
+}
+
+.main .main_para:hover {
+  color: #ff652f;
 }
 /*# sourceMappingURL=main.css.map */
