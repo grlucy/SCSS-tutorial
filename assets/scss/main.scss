@@ -1,14 +1,23 @@
 @import "./resets";
 @import "./variables";
 
+// functions should be used to compute and return values
 @function weight($weight-name) {
   @return map-get($font-weights, $weight-name);
 }
 
-@mixin flexCenter {
+// mixins should be used to define styles
+@mixin flexCenter($direction) {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: $direction;
+}
+@mixin theme($light-theme: true) {
+  @if $light-theme {
+    background: lighten($primary-color, 100%);
+    color: darken($text-color, 100%);
+  }
 }
 
 body {
@@ -17,7 +26,7 @@ body {
 }
 
 .main {
-  @include flexCenter();
+  @include flexCenter(column);
   width: 80%;
   margin: 20px auto;
 
@@ -28,4 +37,8 @@ body {
       color: $accent-color;
     }
   }
+}
+
+.light {
+  @include theme(true);
 }
