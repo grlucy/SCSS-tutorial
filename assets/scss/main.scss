@@ -1,3 +1,4 @@
+// import partials (Sass files named with a leading underscore, letting Sass know that the file is only a partial file and that it should not be generated into a CSS file)
 @import "./resets";
 @import "./variables";
 
@@ -49,5 +50,7 @@ body {
 }
 
 .light {
-  @include theme(true);
+  @include mobile {
+    @include theme(true);
+  }
 }
