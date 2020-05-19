@@ -33,7 +33,8 @@ body {
 
 .main {
   @include flexCenter(row);
-  width: 80%;
+  // math operations where both arguments are the same unit type (%, vh, px, etc) do not need the calc() function
+  width: 80% - 25%;
   margin: 20px auto;
 
   #{&}_para1 {
