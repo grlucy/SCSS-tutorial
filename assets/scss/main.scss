@@ -36,11 +36,18 @@ body {
   width: 80%;
   margin: 20px auto;
 
-  #{&}_para {
+  #{&}_para1 {
     font-weight: weight(bold);
 
     &:hover {
       color: $accent-color;
+    }
+  }
+
+  #{&}_para2 {
+    @extend .main_para1;
+    &:hover {
+      color: pink;
     }
   }
 
